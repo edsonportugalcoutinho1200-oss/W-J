@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Evita vazar a URL completa deste painel (que pode conter IDs em query
+         string) para sites de terceiros linkados a partir daqui. -->
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- Content-Security-Policy real deve ser enviada como HTTP header pelo
+         servidor/CDN que hospeda o build (mais forte que a meta tag e não
+         pode ser sobrescrita por HTML injetado). Ajuste `connect-src` para
+         a URL real da API antes de ir para produção. -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https: data:; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://localhost:3000"
+    />
+    <title>Backoffice · E-commerce</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
