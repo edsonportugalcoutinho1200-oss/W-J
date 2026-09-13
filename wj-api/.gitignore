@@ -1,0 +1,20 @@
+# Dependências
+node_modules/
+
+# Build
+dist/
+*.tsbuildinfo
+
+# Variáveis de ambiente — contém a senha do banco, nunca versionar.
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+
+# Editor / SO
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
